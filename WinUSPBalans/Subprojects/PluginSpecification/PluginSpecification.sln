@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginSpecification", "PluginSpecification.csproj", "{E30D7F84-C5B6-443B-95EE-398204BB7D53}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E30D7F84-C5B6-443B-95EE-398204BB7D53}.Debug.ActiveCfg = Debug|.NET
+		{E30D7F84-C5B6-443B-95EE-398204BB7D53}.Debug.Build.0 = Debug|.NET
+		{E30D7F84-C5B6-443B-95EE-398204BB7D53}.Release.ActiveCfg = Release|.NET
+		{E30D7F84-C5B6-443B-95EE-398204BB7D53}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

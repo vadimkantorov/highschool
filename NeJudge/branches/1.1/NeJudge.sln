@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeDatabase", "NeDatabase\NeDatabase.csproj", "{2AF75602-E8AF-431C-B842-4552DC04DCD1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeJudge", "http://localhost/NeJudge/NeJudge.csproj", "{5394316D-ED87-4446-BEED-631569CFBAAE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{2AF75602-E8AF-431C-B842-4552DC04DCD1}.Debug.ActiveCfg = Debug|.NET
+		{2AF75602-E8AF-431C-B842-4552DC04DCD1}.Debug.Build.0 = Debug|.NET
+		{2AF75602-E8AF-431C-B842-4552DC04DCD1}.Release.ActiveCfg = Release|.NET
+		{2AF75602-E8AF-431C-B842-4552DC04DCD1}.Release.Build.0 = Release|.NET
+		{5394316D-ED87-4446-BEED-631569CFBAAE}.Debug.ActiveCfg = Debug|.NET
+		{5394316D-ED87-4446-BEED-631569CFBAAE}.Debug.Build.0 = Debug|.NET
+		{5394316D-ED87-4446-BEED-631569CFBAAE}.Release.ActiveCfg = Release|.NET
+		{5394316D-ED87-4446-BEED-631569CFBAAE}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

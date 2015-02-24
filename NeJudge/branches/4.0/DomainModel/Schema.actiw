@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<model dslVersion="1.0.0.0" Id="01f68d30-a70c-4324-9efd-62aa42f9d731" caseOfPrivateFields="Camelcase" xmlns="http://schemas.microsoft.com/dsltools/ActiveWriter">
+  <classes>
+    <modelClass name="Problem">
+      <properties>
+        <modelClassProperty Id="d4ca6f76-e32d-4cb8-8ae9-be3f351ced1f" name="ID" columnType="Int32" length="0" notNull="true" keyType="PrimaryKey" />
+        <modelClassProperty Id="aafc6c3c-4d5b-447d-808d-46e993aac65f" name="ShortName" length="4" notNull="true" />
+        <modelClassProperty Id="96a2e0b2-fa63-404a-9e62-d9a551971189" name="DefaultName" length="0" />
+        <modelClassProperty Id="7e1d5661-8b97-4924-b935-f95f892e37a4" name="DefaultStatement" length="0" />
+        <modelClassProperty Id="381b3296-0eb5-4d7d-9189-14a9670eaad6" name="DefaultLanguage" length="0" />
+        <modelClassProperty Id="3c377d4a-8cf5-499b-bee1-a3d1fd4f81c1" name="TimeLimit" length="0" />
+        <modelClassProperty Id="8f686db9-f4be-4940-ae9c-a6d87e82b320" name="MemoryLimit" length="0" />
+        <modelClassProperty Id="a24ffa88-19f5-4c6c-903a-fafe1d366350" name="OutputLimit" length="0" />
+      </properties>
+    </modelClass>
+    <modelClass name="ProblemTranslation">
+      <targets>
+        <manyToOneRelation Id="7d478207-a755-48a0-a2b3-dd9cbf1ed858" sourceColumn="ProblemID">
+          <modelClassMoniker name="/01f68d30-a70c-4324-9efd-62aa42f9d731/Problem" />
+        </manyToOneRelation>
+      </targets>
+      <properties>
+        <modelClassProperty Id="e08f8392-d744-4897-8d0f-0e2fb87e05f2" name="ID" columnType="Int32" length="0" keyType="PrimaryKey" />
+        <modelClassProperty Id="651353dc-a173-4861-84a3-40eee35fefb1" name="ProblemID" length="0" />
+        <modelClassProperty Id="cd88e80d-7fa2-44b7-8e63-932175161dd6" name="Language" length="0" />
+        <modelClassProperty Id="b6c98997-9258-4936-bb4c-e0d4140aa846" name="TranslatedName" length="0" />
+        <modelClassProperty Id="0df3e00c-96ff-49e5-bc9b-7483d06674b2" name="TranslatedStatement" length="0" />
+      </properties>
+    </modelClass>
+    <modelClass name="Contest">
+      <properties>
+        <modelClassProperty Id="b87b70c0-c152-41e0-b99e-6b79841d8447" name="ID" length="0" />
+        <modelClassProperty Id="9efc7125-faa6-4870-bf3a-5a0a6e143ac2" name="Name" length="0" />
+      </properties>
+    </modelClass>
+  </classes>
+</model>

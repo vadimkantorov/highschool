@@ -1,0 +1,36 @@
+Done - Обрабатывать отсутствие задач в соревновании в контроле SelectProblem/Contest
+Done - Проапдейтить UpdateProblem в mysqldb.cs
+Done - Переименовать problemset.aspx в contest.aspx
+Done - Брать Config из AppSettings
+- Исправить pid/tid == -1 на db.CheckTid/pid - непонятно, нужно ли вообще
+- Перепроектировать бд
+- Приделать нормальный доступ анонимным пользователям:
+	Страницы, на которые можно пускать анонима:
+
+	problem.aspx
+	printproblem.aspx
+	printcontest.aspx
+	contest.aspx
+	contests.aspx
+	monitor.aspx
+	status.aspx
+	questions.aspx
+	edituser.aspx
+	login.aspx
+	default.aspx
+	license.aspx
+	
+	messages.aspx
+	
+	Страницы, на которые нельзя пускать анонима:
+	errorpage.aspx
+	editcontest.aspx
+	editproblem.aspx
+- messages.aspx
+
+- намутить вып. списки с кнопочкой создать на editcontest.aspx и editproblem.aspx
+- сохранять в репозитории макет бд - непонятно где
+- Role в MsSql
+- Connection Pool
+- Хранить на одной страниц всего одно подключение
+- Валидаторы на edituser

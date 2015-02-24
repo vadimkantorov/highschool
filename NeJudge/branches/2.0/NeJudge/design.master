@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="design.master.cs" Inherits="Ne.Judge.DesignPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="description" content="Архив задач по программированию"/>
+	<meta http-equiv="keywords" content="ACM, Online Judge, NeJudge, SESC USU"/>
+	<link href="Styles/Default.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+	<form id="MainForm" method="post" runat="server">
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="2">
+					<table width="100%" cellpadding="0" cellspacing="0" style="border: black 1px solid;">
+						<tr class="neWhiteBlue" valign="middle">
+							<td align="left">
+								<h1 class="neWhiteBlue" style="margin: 5px">
+									<a href="./" style="color: red">Ne</a><span style="color: black">Judge</span> Online Judge
+								</h1>
+							</td>
+							<td align="left" class="neWhiteBlue">
+								<h2 class="neWhiteBlue" style="margin: 5px">
+									<asp:Label runat="server" ID="pname" EnableViewState="false" />
+								</h2>
+							</td>
+						</tr>
+						<tr class="neCyan">
+							<td align="left" style="padding: 2px">
+								<asp:LinkButton runat="server" ID="signOut" EnableViewState="false" CausesValidation="False" OnClick="Logout" />
+							</td>
+							<td align="right">Время сервера: <%=DateTime.Now.ToString()%></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="nav" style="vertical-align: top; width: 20%">
+					<div class="navBlock" id="anon_div" visible="false" runat="server">
+						<h3 class="navTitle">Аутентификация</h3>
+						<ul>
+							<li><a href="login.aspx">Войти в систему</a></li>
+							<li><a href="edituser.aspx">Регистрация</a></li>
+						</ul>
+					</div>
+					<div class="navBlock" id="common_div" runat="server">
+						<h3 class="navTitle">NeJudge</h3>
+						<asp:BulletedList ID="commonBL" runat="server" EnableViewState="false" BulletStyle="Circle" DisplayMode="HyperLink">
+							<asp:ListItem Text="Главная страница" Value="~/default.aspx" />
+							<asp:ListItem Text="Список соревнований" Value="~/contests.aspx" />
+							<asp:ListItem Text="Монитор" Value="~/monitor.aspx" />
+						</asp:BulletedList>
+					</div>
+					<div class="navBlock" id="account_div" visible="false" runat="server">
+						<h3 class="navTitle">Моя учетная запись</h3>
+						<asp:BulletedList runat="server" ID="accountBL" EnableViewState="false" BulletStyle="Circle" DisplayMode="HyperLink" />
+					</div>
+					<div class="navBlock" id="admin_div" visible="false" runat="server">
+						<h3 class="navTitle">Администрирование</h3>
+						<ul>
+							<li><a href="editcontest.aspx">Управление соревнованиями</a></li>
+							<li><a href="editproblem.aspx">Управление задачами</a></li>
+							<li><a href="status.aspx">Просмотр всех решений</a></li>
+							<li><a href="questions.aspx">Просмотр вопросов</a></li>
+						</ul>
+					</div>
+				</td>
+				<td class="content" style="vertical-align: top"><asp:ContentPlaceHolder ID="Content" runat="server" /></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table class="neCyan" width="100%" border="0" style="border: black 1px solid;" cellpadding="0" cellspacing="0">
+						<tr>
+							<td align="left" valign="bottom">Copyright © 2005-2006 <a href="team.aspx">[NeJudge Development Team]</a></td>
+							<td align="center" valign="bottom">
+								<a href='javascript:alert("ViewState length is "+document.forms[0]["__VIEWSTATE"].value.length)'>ViewState Length</a>
+							</td>
+							<td align="right" valign="bottom">Powered by <a href="http://asp.net">[ASP.NET]</a></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

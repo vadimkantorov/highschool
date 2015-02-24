@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<configuration>
+	<configSections>
+		<section name="nejudge" type="Ne.Configuration.NeJudgeConfigurationSection, NeCommon"/>
+	</configSections>
+	<nejudge ConnectionString="Server=KANTOROV\SQLEXPRESS;Database=NeJudge;Trusted_connection=true" ProviderPath="D:\Projects\C#\notFinished\NeJudge\branches\2.0\Providers\MsSqlDataProvider\bin\Debug\Provider.dll">
+		<ContestTypeHandlers>
+			<add ContestType="ICPC" AssemblyPath="D:\Projects\C#\notFinished\NeJudge\branches\2.0\ICPCHandler\bin\Debug\ICPCHandler.dll"/>
+		</ContestTypeHandlers>
+	</nejudge>
+	<!--<location path="license.aspx">
+		<system.web>
+			<authorization>
+				<deny users="bill" />
+			</authorization>
+			<browserCaps>
+				tagwriter=System.Web.UI.HtmlTextWriter
+			</browserCaps>
+		</system.web>
+	</location>-->
+	<system.web>
+		<!--  DYNAMIC DEBUG COMPILATION
+		  Set compilation debug="true" to enable ASPX debugging.  Otherwise, setting this value to
+		  false will improve runtime performance of this application. 
+		  Set compilation debug="true" to insert debugging symbols (.pdb information)
+		  into the compiled page. Because this creates a larger file that executes
+		  more slowly, you should set this value to true only when debugging and to
+		  false at all other times. For more information, refer to the documentation about
+		  debugging ASP.NET files.
+	-->
+		<compilation defaultLanguage="c#" debug="true">
+			<!--<compilers>
+				<compiler language="c#" type="Microsoft.CSharp.CSharpCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" extension=".cs" compilerOptions="/d:DEBUG;TRACE"/>
+			</compilers>-->
+			<assemblies>
+				<add assembly="System.Runtime.Serialization.Formatters.Soap, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<add assembly="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+				<add assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+				<!--<add assembly="nunit.framework, Version=2.2.7.0, Culture=neutral, PublicKeyToken=96D09A1EB7F44A77"/>
+				<add assembly="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=B32731D11CE58905"/>
+				<add assembly="nunit.core, Version=2.2.6.0, Culture=neutral, PublicKeyToken=96D09A1EB7F44A77"/>-->
+				<add assembly="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=B32731D11CE58905"/></assemblies>
+		</compilation>
+		<!--  CUSTOM ERROR MESSAGES
+		  Set customErrors mode="On" or "RemoteOnly" to enable custom error messages, "Off" to disable. 
+		  Add <error> tags for each of the errors you want to handle.
+
+		  "On" Always display custom (friendly) messages.
+		  "Off" Always display detailed ASP.NET error information.
+		  "RemoteOnly" Display custom (friendly) messages only to users not running 
+		   on the local Web server. This setting is recommended for security purposes, so 
+		   that you do not display application detail information to remote clients.
+		   <error statusCode=404 redirect=http404error.htm />
+	-->
+		<customErrors mode="Off" defaultRedirect="error.aspx"/>
+		<!--  AUTHENTICATION 
+		  This section sets the authentication policies of the application. Possible modes are "Windows", 
+		  "Forms", "Passport" and "None"
+
+		  "None" No authentication is performed. 
+		  "Windows" IIS performs authentication (Basic, Digest, or Integrated Windows) according to 
+		   its settings for the application. Anonymous access must be disabled in IIS. 
+		  "Forms" You provide a custom form (Web page) for users to enter their credentials, and then 
+		   you authenticate them in your application. A user credential token is stored in a cookie.
+		  "Passport" Authentication is performed via a centralized authentication service provided
+		   by Microsoft that offers a single logon and core profile services for member sites.
+	-->
+		<authentication mode="Forms">
+			<forms name="NeJudgeCookie" path="/" loginUrl="login.aspx" protection="All" timeout="200">
+				<!--<credentials passwordFormat="Clear">
+					<user name="anonymous" password="" />
+					<user name="admin" password="admin" />
+				</credentials>-->
+			</forms>
+		</authentication>
+		<!--  AUTHORIZATION 
+		  This section sets the authorization policies of the application. You can allow or deny access
+		  to application resources by user or role. Wildcards: "*" mean everyone, "?" means anonymous 
+		  (unauthenticated) users.
+	-->
+		<authorization>
+			<!--<allow users="*" />-->
+			<!-- Allow all users -->
+			<!--  <allow	 users="[comma separated list of users]"
+							 Role="[comma separated list of Role]"/>
+				  <deny	  users="[comma separated list of users]"
+							 Role="[comma separated list of Role]"/>
+			-->
+			<allow users="*"/>
+		</authorization>
+		<!--  APPLICATION-LEVEL TRACE LOGGING
+		  Application-level tracing enables trace log output for every page within an application. 
+		  Set trace enabled="true" to enable application trace logging.  If pageOutput="true", the
+		  trace information will be displayed at the bottom of each page.  Otherwise, you can view the 
+		  application trace log by browsing the "trace.axd" page from your web application
+		  root. 
+	-->
+		<pages enableEventValidation="false"/>
+		<trace enabled="false" requestLimit="10" pageOutput="false" traceMode="SortByTime" localOnly="true"/>
+		<!--  SESSION STATE SETTINGS
+		  By default ASP.NET uses cookies to identify which requests belong to a particular session. 
+		  If cookies are not available, a session can be tracked by adding a session identifier to the URL. 
+		  To disable cookies, set sessionState cookieless="true".
+	-->
+		<sessionState mode="InProc" stateConnectionString="tcpip=127.0.0.1:42424" sqlConnectionString="data source=127.0.0.1;Trusted_Connection=yes" cookieless="false" timeout="20"/>
+		<!--  Globalization
+		  This section sets the Globalization settings of the application. 
+	-->
+		<globalization requestEncoding="utf-8" responseEncoding="utf-8"/>
+		<browserCaps>
+			tagwriter=System.Web.UI.HtmlTextWriter
+		</browserCaps>
+		<xhtmlConformance mode="Legacy"/></system.web>
+</configuration>

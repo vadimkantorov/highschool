@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CyverAss">
+</Property><Property Name="Solution File" Value="D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\CyverAss.sln">
+</Property><Property Name="User Options File" Value="D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\CyverAss.suo">
+</Property><Property Name="Date" Value="17 января 2006 г.">
+</Property><Property Name="Time" Value="1:00">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="CyverAss.sln" Description="File successfully backed up as D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\Backup1\CyverAss.sln">
+</Event><Event ErrorLevel="0" Project="" Source="CyverAss.suo" Description="File successfully backed up as D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\Backup1\CyverAss.suo">
+</Event><Event ErrorLevel="0" Project="CyverAss" Source="CyverAss.csproj" Description="Project file successfully backed up as D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\Backup1\CyverAss.csproj">
+</Event><Event ErrorLevel="0" Project="CyverAss" Source="CyverAss.csproj.user" Description="Project user file successfully backed up as D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\Backup1\CyverAss.csproj.user">
+</Event><Event ErrorLevel="0" Project="CyverAss" Source="AssemblyInfo.cs" Description="File successfully backed up as D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\Backup1\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="CyverAss" Source="Class1.cs" Description="File successfully backed up as D:\Projects\C#\notFinished\WinUSPBalans 2\Subprojects\CyverAss\Backup1\Class1.cs">
+</Event><Event ErrorLevel="0" Project="CyverAss" Source="CyverAss.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="CyverAss" Source="CyverAss.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="CyverAss.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CyverAss.sln" Description="Converted">
+</Event></UpgradeLog>

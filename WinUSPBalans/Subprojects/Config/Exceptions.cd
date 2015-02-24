@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagram xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" MajorVersion="1" MinorVersion="1" xmlns="http://www.microsoft.com/VisualStudio/EnterpriseTools/ClassDesigner/V1.1/DiagramSchema.xsd">
+  <View FilterFieldProperty="false" LastOpened="true" Name="Main">
+    <AbsoluteBounds X="0" Y="0" Height="8.5" Width="11" />
+    <Font Name="Tahoma" Size="0.1145833358168602" />
+    <Class Collapsed="false">
+      <AbsoluteBounds X="4.5" Y="0.5" Height="1.3175734483202297" Width="1.5" />
+      <TypeIdentifier>
+        <FullName>Ini.ConfigException</FullName>
+        <FileName>Exceptions.cs</FileName>
+        <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      </TypeIdentifier>
+    </Class>
+    <Class Collapsed="false">
+      <AbsoluteBounds X="1.25" Y="3" Height="2.0350319444139791" Width="1.5" />
+      <TypeIdentifier>
+        <FullName>Ini.IniFormatException</FullName>
+        <FileName>Exceptions.cs</FileName>
+        <HashCode>AAEAAAAAAAAAAAAAAAAIAAAAAACAAAAAAAAAIAAAAAA=</HashCode>
+      </TypeIdentifier>
+      <LollipopPosition Position="0.20000000000000018" />
+    </Class>
+    <Class Collapsed="false">
+      <AbsoluteBounds X="5" Y="3" Height="2.0350319444139791" Width="1.5" />
+      <TypeIdentifier>
+        <FullName>Ini.SectionNotFoundException</FullName>
+        <FileName>Exceptions.cs</FileName>
+        <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAACAAAAAAAAAYAAAAAA=</HashCode>
+      </TypeIdentifier>
+      <LollipopPosition Position="0.19999999999999929" />
+    </Class>
+  </View>
+</Diagram>

@@ -1,0 +1,8 @@
+<%@ Page Language="c#" Inherits="Ne.Judge.ViewFilePage" CodeFile="viewdata.aspx.cs" MasterPageFile="~/design.master"
+	Title="Просмотр файла" %>
+
+<asp:Content ContentPlaceHolderID="Content" runat="server">
+	<asp:Literal ID="fileContent" runat="server" EnableViewState="False" />
+	<asp:DataGrid ID="reportGrid" runat="server" EnableViewState="False">
+	</asp:DataGrid>
+</asp:Content>

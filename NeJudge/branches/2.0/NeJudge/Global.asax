@@ -1,0 +1,1 @@
+<%@ Application Inherits="Ne.Judge.Global" Language="C#"%>

@@ -1,0 +1,2329 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NLog</name>
+    </assembly>
+    <members>
+        <member name="T:NLog.Appenders.AppenderCollection">
+            <summary>
+            A collection of elements of type Appender
+            </summary>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.#ctor">
+            <summary>
+            Initializes a new empty instance of the AppenderCollection class.
+            </summary>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.#ctor(NLog.Appenders.Appender[])">
+            <summary>
+            Initializes a new instance of the AppenderCollection class, containing elements
+            copied from an array.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the new AppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.#ctor(NLog.Appenders.AppenderCollection)">
+            <summary>
+            Initializes a new instance of the AppenderCollection class, containing elements
+            copied from another instance of AppenderCollection
+            </summary>
+            <param name="items">
+            The AppenderCollection whose elements are to be added to the new AppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.AddRange(NLog.Appenders.Appender[])">
+            <summary>
+            Adds the elements of an array to the end of this AppenderCollection.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the end of this AppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.AddRange(NLog.Appenders.AppenderCollection)">
+            <summary>
+            Adds the elements of another AppenderCollection to the end of this AppenderCollection.
+            </summary>
+            <param name="items">
+            The AppenderCollection whose elements are to be added to the end of this AppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.Add(NLog.Appenders.Appender)">
+            <summary>
+            Adds an instance of type Appender to the end of this AppenderCollection.
+            </summary>
+            <param name="value">
+            The Appender to be added to the end of this AppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.Contains(NLog.Appenders.Appender)">
+            <summary>
+            Determines whether a specfic Appender value is in this AppenderCollection.
+            </summary>
+            <param name="value">
+            The Appender value to locate in this AppenderCollection.
+            </param>
+            <returns>
+            true if value is found in this AppenderCollection;
+            false otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.IndexOf(NLog.Appenders.Appender)">
+            <summary>
+            Return the zero-based index of the first occurrence of a specific value
+            in this AppenderCollection
+            </summary>
+            <param name="value">
+            The Appender value to locate in the AppenderCollection.
+            </param>
+            <returns>
+            The zero-based index of the first occurrence of the _ELEMENT value if found;
+            -1 otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.Insert(System.Int32,NLog.Appenders.Appender)">
+            <summary>
+            Inserts an element into the AppenderCollection at the specified index
+            </summary>
+            <param name="index">
+            The index at which the Appender is to be inserted.
+            </param>
+            <param name="value">
+            The Appender to insert.
+            </param>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.Remove(NLog.Appenders.Appender)">
+            <summary>
+            Removes the first occurrence of a specific Appender from this AppenderCollection.
+            </summary>
+            <param name="value">
+            The Appender value to remove from this AppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Appenders.AppenderCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the elements of this AppenderCollection.
+            </summary>
+            <returns>
+            An object that implements System.Collections.IEnumerator.
+            </returns>        
+        </member>
+        <member name="P:NLog.Appenders.AppenderCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the Appender at the given index in this AppenderCollection.
+            </summary>
+        </member>
+        <member name="T:NLog.Appenders.AppenderCollection.Enumerator">
+            <summary>
+            Type-specific enumeration class, used by AppenderCollection.GetEnumerator.
+            </summary>
+        </member>
+        <member name="T:NLog.Config.AppenderRuleCollection">
+            <summary>
+            A collection of elements of type AppenderRule
+            </summary>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.#ctor">
+            <summary>
+            Initializes a new empty instance of the AppenderRuleCollection class.
+            </summary>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.#ctor(NLog.Config.AppenderRule[])">
+            <summary>
+            Initializes a new instance of the AppenderRuleCollection class, containing elements
+            copied from an array.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the new AppenderRuleCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.#ctor(NLog.Config.AppenderRuleCollection)">
+            <summary>
+            Initializes a new instance of the AppenderRuleCollection class, containing elements
+            copied from another instance of AppenderRuleCollection
+            </summary>
+            <param name="items">
+            The AppenderRuleCollection whose elements are to be added to the new AppenderRuleCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.AddRange(NLog.Config.AppenderRule[])">
+            <summary>
+            Adds the elements of an array to the end of this AppenderRuleCollection.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the end of this AppenderRuleCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.AddRange(NLog.Config.AppenderRuleCollection)">
+            <summary>
+            Adds the elements of another AppenderRuleCollection to the end of this AppenderRuleCollection.
+            </summary>
+            <param name="items">
+            The AppenderRuleCollection whose elements are to be added to the end of this AppenderRuleCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.Add(NLog.Config.AppenderRule)">
+            <summary>
+            Adds an instance of type AppenderRule to the end of this AppenderRuleCollection.
+            </summary>
+            <param name="value">
+            The AppenderRule to be added to the end of this AppenderRuleCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.Contains(NLog.Config.AppenderRule)">
+            <summary>
+            Determines whether a specfic AppenderRule value is in this AppenderRuleCollection.
+            </summary>
+            <param name="value">
+            The AppenderRule value to locate in this AppenderRuleCollection.
+            </param>
+            <returns>
+            true if value is found in this AppenderRuleCollection;
+            false otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.IndexOf(NLog.Config.AppenderRule)">
+            <summary>
+            Return the zero-based index of the first occurrence of a specific value
+            in this AppenderRuleCollection
+            </summary>
+            <param name="value">
+            The AppenderRule value to locate in the AppenderRuleCollection.
+            </param>
+            <returns>
+            The zero-based index of the first occurrence of the _ELEMENT value if found;
+            -1 otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.Insert(System.Int32,NLog.Config.AppenderRule)">
+            <summary>
+            Inserts an element into the AppenderRuleCollection at the specified index
+            </summary>
+            <param name="index">
+            The index at which the AppenderRule is to be inserted.
+            </param>
+            <param name="value">
+            The AppenderRule to insert.
+            </param>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.Remove(NLog.Config.AppenderRule)">
+            <summary>
+            Removes the first occurrence of a specific AppenderRule from this AppenderRuleCollection.
+            </summary>
+            <param name="value">
+            The AppenderRule value to remove from this AppenderRuleCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Config.AppenderRuleCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the elements of this AppenderRuleCollection.
+            </summary>
+            <returns>
+            An object that implements System.Collections.IEnumerator.
+            </returns>        
+        </member>
+        <member name="P:NLog.Config.AppenderRuleCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the AppenderRule at the given index in this AppenderRuleCollection.
+            </summary>
+        </member>
+        <member name="T:NLog.Config.AppenderRuleCollection.Enumerator">
+            <summary>
+            Type-specific enumeration class, used by AppenderRuleCollection.GetEnumerator.
+            </summary>
+        </member>
+        <member name="T:NLog.Config.RequiredParameterAttribute">
+            <summary>
+            Attribute used to mark the required parameters for appenders, 
+            layout appenders and filters.
+            </summary>
+        </member>
+        <member name="T:NLog.Filters.FilterCollection">
+            <summary>
+            A collection of elements of type Filter
+            </summary>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.#ctor">
+            <summary>
+            Initializes a new empty instance of the FilterCollection class.
+            </summary>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.#ctor(NLog.Filters.Filter[])">
+            <summary>
+            Initializes a new instance of the FilterCollection class, containing elements
+            copied from an array.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the new FilterCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.#ctor(NLog.Filters.FilterCollection)">
+            <summary>
+            Initializes a new instance of the FilterCollection class, containing elements
+            copied from another instance of FilterCollection
+            </summary>
+            <param name="items">
+            The FilterCollection whose elements are to be added to the new FilterCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.AddRange(NLog.Filters.Filter[])">
+            <summary>
+            Adds the elements of an array to the end of this FilterCollection.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the end of this FilterCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.AddRange(NLog.Filters.FilterCollection)">
+            <summary>
+            Adds the elements of another FilterCollection to the end of this FilterCollection.
+            </summary>
+            <param name="items">
+            The FilterCollection whose elements are to be added to the end of this FilterCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.Add(NLog.Filters.Filter)">
+            <summary>
+            Adds an instance of type Filter to the end of this FilterCollection.
+            </summary>
+            <param name="value">
+            The Filter to be added to the end of this FilterCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.Contains(NLog.Filters.Filter)">
+            <summary>
+            Determines whether a specfic Filter value is in this FilterCollection.
+            </summary>
+            <param name="value">
+            The Filter value to locate in this FilterCollection.
+            </param>
+            <returns>
+            true if value is found in this FilterCollection;
+            false otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.IndexOf(NLog.Filters.Filter)">
+            <summary>
+            Return the zero-based index of the first occurrence of a specific value
+            in this FilterCollection
+            </summary>
+            <param name="value">
+            The Filter value to locate in the FilterCollection.
+            </param>
+            <returns>
+            The zero-based index of the first occurrence of the _ELEMENT value if found;
+            -1 otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.Insert(System.Int32,NLog.Filters.Filter)">
+            <summary>
+            Inserts an element into the FilterCollection at the specified index
+            </summary>
+            <param name="index">
+            The index at which the Filter is to be inserted.
+            </param>
+            <param name="value">
+            The Filter to insert.
+            </param>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.Remove(NLog.Filters.Filter)">
+            <summary>
+            Removes the first occurrence of a specific Filter from this FilterCollection.
+            </summary>
+            <param name="value">
+            The Filter value to remove from this FilterCollection.
+            </param>
+        </member>
+        <member name="M:NLog.Filters.FilterCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the elements of this FilterCollection.
+            </summary>
+            <returns>
+            An object that implements System.Collections.IEnumerator.
+            </returns>        
+        </member>
+        <member name="P:NLog.Filters.FilterCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the Filter at the given index in this FilterCollection.
+            </summary>
+        </member>
+        <member name="T:NLog.Filters.FilterCollection.Enumerator">
+            <summary>
+            Type-specific enumeration class, used by FilterCollection.GetEnumerator.
+            </summary>
+        </member>
+        <member name="T:NLog.Internal.AppenderDictionary">
+            <summary>
+            A dictionary with keys of type string and values of type Appender
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.AppenderDictionary.#ctor">
+            <summary>
+            Initializes a new empty instance of the AppenderDictionary class
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.AppenderDictionary.Add(System.String,NLog.Appenders.Appender)">
+            <summary>
+            Adds an element with the specified key and value to this AppenderDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to add.
+            </param>
+            <param name="value">
+            The Appender value of the element to add.
+            </param>
+        </member>
+        <member name="M:NLog.Internal.AppenderDictionary.Contains(System.String)">
+            <summary>
+            Determines whether this AppenderDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this AppenderDictionary.
+            </param>
+            <returns>
+            true if this AppenderDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.AppenderDictionary.ContainsKey(System.String)">
+            <summary>
+            Determines whether this AppenderDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this AppenderDictionary.
+            </param>
+            <returns>
+            true if this AppenderDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.AppenderDictionary.ContainsValue(NLog.Appenders.Appender)">
+            <summary>
+            Determines whether this AppenderDictionary contains a specific value.
+            </summary>
+            <param name="value">
+            The Appender value to locate in this AppenderDictionary.
+            </param>
+            <returns>
+            true if this AppenderDictionary contains an element with the specified value;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.AppenderDictionary.Remove(System.String)">
+            <summary>
+            Removes the element with the specified key from this AppenderDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to remove.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.AppenderDictionary.Item(System.String)">
+            <summary>
+            Gets or sets the Appender associated with the given string
+            </summary>
+            <param name="key">
+            The string whose value to get or set.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.AppenderDictionary.Keys">
+            <summary>
+            Gets a collection containing the keys in this AppenderDictionary.
+            </summary>
+        </member>
+        <member name="P:NLog.Internal.AppenderDictionary.Values">
+            <summary>
+            Gets a collection containing the values in this AppenderDictionary.
+            </summary>
+        </member>
+        <member name="T:NLog.Internal.FilterDictionary">
+            <summary>
+            A dictionary with keys of type string and values of type Filter
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.FilterDictionary.#ctor">
+            <summary>
+            Initializes a new empty instance of the FilterDictionary class
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.FilterDictionary.Add(System.String,NLog.Filters.Filter)">
+            <summary>
+            Adds an element with the specified key and value to this FilterDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to add.
+            </param>
+            <param name="value">
+            The Filter value of the element to add.
+            </param>
+        </member>
+        <member name="M:NLog.Internal.FilterDictionary.Contains(System.String)">
+            <summary>
+            Determines whether this FilterDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this FilterDictionary.
+            </param>
+            <returns>
+            true if this FilterDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.FilterDictionary.ContainsKey(System.String)">
+            <summary>
+            Determines whether this FilterDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this FilterDictionary.
+            </param>
+            <returns>
+            true if this FilterDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.FilterDictionary.ContainsValue(NLog.Filters.Filter)">
+            <summary>
+            Determines whether this FilterDictionary contains a specific value.
+            </summary>
+            <param name="value">
+            The Filter value to locate in this FilterDictionary.
+            </param>
+            <returns>
+            true if this FilterDictionary contains an element with the specified value;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.FilterDictionary.Remove(System.String)">
+            <summary>
+            Removes the element with the specified key from this FilterDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to remove.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.FilterDictionary.Item(System.String)">
+            <summary>
+            Gets or sets the Filter associated with the given string
+            </summary>
+            <param name="key">
+            The string whose value to get or set.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.FilterDictionary.Keys">
+            <summary>
+            Gets a collection containing the keys in this FilterDictionary.
+            </summary>
+        </member>
+        <member name="P:NLog.Internal.FilterDictionary.Values">
+            <summary>
+            Gets a collection containing the values in this FilterDictionary.
+            </summary>
+        </member>
+        <member name="T:NLog.Internal.LayoutAppenderDictionary">
+            <summary>
+            A dictionary with keys of type string and values of type LayoutAppender
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.LayoutAppenderDictionary.#ctor">
+            <summary>
+            Initializes a new empty instance of the LayoutAppenderDictionary class
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.LayoutAppenderDictionary.Add(System.String,NLog.LayoutAppenders.LayoutAppender)">
+            <summary>
+            Adds an element with the specified key and value to this LayoutAppenderDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to add.
+            </param>
+            <param name="value">
+            The LayoutAppender value of the element to add.
+            </param>
+        </member>
+        <member name="M:NLog.Internal.LayoutAppenderDictionary.Contains(System.String)">
+            <summary>
+            Determines whether this LayoutAppenderDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this LayoutAppenderDictionary.
+            </param>
+            <returns>
+            true if this LayoutAppenderDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.LayoutAppenderDictionary.ContainsKey(System.String)">
+            <summary>
+            Determines whether this LayoutAppenderDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this LayoutAppenderDictionary.
+            </param>
+            <returns>
+            true if this LayoutAppenderDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.LayoutAppenderDictionary.ContainsValue(NLog.LayoutAppenders.LayoutAppender)">
+            <summary>
+            Determines whether this LayoutAppenderDictionary contains a specific value.
+            </summary>
+            <param name="value">
+            The LayoutAppender value to locate in this LayoutAppenderDictionary.
+            </param>
+            <returns>
+            true if this LayoutAppenderDictionary contains an element with the specified value;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.LayoutAppenderDictionary.Remove(System.String)">
+            <summary>
+            Removes the element with the specified key from this LayoutAppenderDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to remove.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.LayoutAppenderDictionary.Item(System.String)">
+            <summary>
+            Gets or sets the LayoutAppender associated with the given string
+            </summary>
+            <param name="key">
+            The string whose value to get or set.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.LayoutAppenderDictionary.Keys">
+            <summary>
+            Gets a collection containing the keys in this LayoutAppenderDictionary.
+            </summary>
+        </member>
+        <member name="P:NLog.Internal.LayoutAppenderDictionary.Values">
+            <summary>
+            Gets a collection containing the values in this LayoutAppenderDictionary.
+            </summary>
+        </member>
+        <member name="T:NLog.Internal.LoggerDictionary">
+            <summary>
+            A dictionary with keys of type string and values of type Logger
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.LoggerDictionary.#ctor">
+            <summary>
+            Initializes a new empty instance of the LoggerDictionary class
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.LoggerDictionary.Add(System.String,NLog.Logger)">
+            <summary>
+            Adds an element with the specified key and value to this LoggerDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to add.
+            </param>
+            <param name="value">
+            The Logger value of the element to add.
+            </param>
+        </member>
+        <member name="M:NLog.Internal.LoggerDictionary.Contains(System.String)">
+            <summary>
+            Determines whether this LoggerDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this LoggerDictionary.
+            </param>
+            <returns>
+            true if this LoggerDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.LoggerDictionary.ContainsKey(System.String)">
+            <summary>
+            Determines whether this LoggerDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this LoggerDictionary.
+            </param>
+            <returns>
+            true if this LoggerDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.LoggerDictionary.ContainsValue(NLog.Logger)">
+            <summary>
+            Determines whether this LoggerDictionary contains a specific value.
+            </summary>
+            <param name="value">
+            The Logger value to locate in this LoggerDictionary.
+            </param>
+            <returns>
+            true if this LoggerDictionary contains an element with the specified value;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.LoggerDictionary.Remove(System.String)">
+            <summary>
+            Removes the element with the specified key from this LoggerDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to remove.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.LoggerDictionary.Item(System.String)">
+            <summary>
+            Gets or sets the Logger associated with the given string
+            </summary>
+            <param name="key">
+            The string whose value to get or set.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.LoggerDictionary.Keys">
+            <summary>
+            Gets a collection containing the keys in this LoggerDictionary.
+            </summary>
+        </member>
+        <member name="P:NLog.Internal.LoggerDictionary.Values">
+            <summary>
+            Gets a collection containing the values in this LoggerDictionary.
+            </summary>
+        </member>
+        <member name="T:NLog.Logger">
+            <summary>
+            Provides logging interface and utility functions.
+            </summary>
+        </member>
+        <member name="M:NLog.Logger.IsEnabled(NLog.LogLevel)">
+            <summary>
+            Determines if logging is enabled for the specified level.
+            </summary>
+            <param name="level">level to be checked</param>
+            <returns><see langword="true" /> if logging is enabled for the specified level, otherwise it returns <see langword="false" />.</returns>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String)">
+            <overloads>
+            Writes the diagnostic message at the specified level using the specified format provider and format parameters.
+            </overloads>
+            <summary>
+            Writes the diagnostic message at the specified level.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> to be written.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified parameters and formatting them with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified parameters.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Boolean" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Boolean" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Char" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Char" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Byte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Byte" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.String" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.String" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Int32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Int32" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Int64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Int64" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Single" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Single" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Double" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Double" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Decimal" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Decimal" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Object" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.Object" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.SByte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.SByte" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.UInt32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.UInt32" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.IFormatProvider,System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.UInt64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Log(NLog.LogLevel,System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the specified level using the specified <see cref="T:System.UInt64" /> as a parameter.
+            </summary>
+            <param name="level">the log level.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String)">
+            <overloads>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified format provider and format parameters.
+            </overloads>
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level.
+            </summary>
+            <param name="message">A <see langword="string" /> to be written.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified parameters and formatting them with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified parameters.
+            </summary>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Boolean" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Boolean" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Char" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Char" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Byte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Byte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.String" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.String" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Int32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Int32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Int64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Int64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Single" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Single" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Double" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Double" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Decimal" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Decimal" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Object" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.Object" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.SByte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.SByte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.UInt32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.UInt32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.IFormatProvider,System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.UInt64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Debug(System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Debug</c> level using the specified <see cref="T:System.UInt64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String)">
+            <overloads>
+            Writes the diagnostic message at the <c>Info</c> level using the specified format provider and format parameters.
+            </overloads>
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level.
+            </summary>
+            <param name="message">A <see langword="string" /> to be written.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified parameters and formatting them with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified parameters.
+            </summary>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Boolean" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Boolean" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Char" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Char" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Byte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Byte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.String" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.String" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Int32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Int32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Int64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Int64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Single" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Single" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Double" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Double" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Decimal" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Decimal" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Object" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.Object" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.SByte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.SByte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.UInt32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.UInt32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.IFormatProvider,System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.UInt64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Info(System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Info</c> level using the specified <see cref="T:System.UInt64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String)">
+            <overloads>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified format provider and format parameters.
+            </overloads>
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level.
+            </summary>
+            <param name="message">A <see langword="string" /> to be written.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified parameters and formatting them with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified parameters.
+            </summary>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Boolean" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Boolean" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Char" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Char" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Byte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Byte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.String" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.String" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Int32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Int32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Int64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Int64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Single" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Single" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Double" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Double" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Decimal" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Decimal" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Object" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.Object" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.SByte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.SByte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.UInt32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.UInt32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.IFormatProvider,System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.UInt64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Warn(System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Warn</c> level using the specified <see cref="T:System.UInt64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String)">
+            <overloads>
+            Writes the diagnostic message at the <c>Error</c> level using the specified format provider and format parameters.
+            </overloads>
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level.
+            </summary>
+            <param name="message">A <see langword="string" /> to be written.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified parameters and formatting them with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified parameters.
+            </summary>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Boolean" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Boolean" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Char" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Char" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Byte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Byte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.String" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.String" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Int32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Int32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Int64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Int64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Single" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Single" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Double" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Double" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Decimal" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Decimal" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Object" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.Object" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.SByte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.SByte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.UInt32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.UInt32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.IFormatProvider,System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.UInt64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Error(System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Error</c> level using the specified <see cref="T:System.UInt64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String)">
+            <overloads>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified format provider and format parameters.
+            </overloads>
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level.
+            </summary>
+            <param name="message">A <see langword="string" /> to be written.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified parameters and formatting them with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Object[])">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified parameters.
+            </summary>
+            <param name="message">A <see langword="string" /> containing format items.</param>
+            <param name="args">Arguments to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Boolean" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Boolean)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Boolean" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Boolean" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Char" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Char)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Char" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Char" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Byte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Byte)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Byte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Byte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.String" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.String)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.String" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.String" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Int32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Int32)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Int32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Int64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Int64)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Int64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Int64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Single" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Single)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Single" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Single" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Double" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Double)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Double" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Double" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Decimal" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Decimal)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Decimal" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Decimal" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Object" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.Object)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.Object" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.Object" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.SByte" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.SByte)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.SByte" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.SByte" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.UInt32" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.UInt32)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.UInt32" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt32" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.IFormatProvider,System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.UInt64" /> as a parameter and formatting it with the supplied format provider.
+            </summary>
+            <param name="formatProvider">An IFormatProvider that supplies culture-specific formatting information.</param>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.Fatal(System.String,System.UInt64)">
+            <summary>
+            Writes the diagnostic message at the <c>Fatal</c> level using the specified <see cref="T:System.UInt64" /> as a parameter.
+            </summary>
+            <param name="message">A <see langword="string" /> containing one format item.</param>
+            <param name="argument">The <see cref="T:System.UInt64" /> argument to format.</param>
+        </member>
+        <member name="M:NLog.Logger.LogLevelFromString(System.String)">
+            <summary>
+            Returns the <see cref="T:NLog.LogLevel"/> that corresponds to the supplied <see langword="string" />.
+            </summary>
+            <param name="s">the texual representation of the log level</param>
+            <returns>the enumeration value.</returns>
+        </member>
+        <member name="P:NLog.Logger.IsDebugEnabled">
+            <summary>
+            Determines if logging is enabled for the <c>Debug</c> level.
+            </summary>
+            <returns><see langword="true" /> if logging is enabled for the <c>Debug</c> level, otherwise it returns <see langword="false" />.</returns>
+        </member>
+        <member name="P:NLog.Logger.IsInfoEnabled">
+            <summary>
+            Determines if logging is enabled for the <c>Info</c> level.
+            </summary>
+            <returns><see langword="true" /> if logging is enabled for the <c>Info</c> level, otherwise it returns <see langword="false" />.</returns>
+        </member>
+        <member name="P:NLog.Logger.IsWarnEnabled">
+            <summary>
+            Determines if logging is enabled for the <c>Warn</c> level.
+            </summary>
+            <returns><see langword="true" /> if logging is enabled for the <c>Warn</c> level, otherwise it returns <see langword="false" />.</returns>
+        </member>
+        <member name="P:NLog.Logger.IsErrorEnabled">
+            <summary>
+            Determines if logging is enabled for the <c>Error</c> level.
+            </summary>
+            <returns><see langword="true" /> if logging is enabled for the <c>Error</c> level, otherwise it returns <see langword="false" />.</returns>
+        </member>
+        <member name="P:NLog.Logger.IsFatalEnabled">
+            <summary>
+            Determines if logging is enabled for the <c>Fatal</c> level.
+            </summary>
+            <returns><see langword="true" /> if logging is enabled for the <c>Fatal</c> level, otherwise it returns <see langword="false" />.</returns>
+        </member>
+        <member name="T:NLog.Internal.TypeDictionary">
+            <summary>
+            A dictionary with keys of type string and values of type Type
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.TypeDictionary.#ctor">
+            <summary>
+            Initializes a new empty instance of the TypeDictionary class
+            </summary>
+        </member>
+        <member name="M:NLog.Internal.TypeDictionary.Add(System.String,System.Type)">
+            <summary>
+            Adds an element with the specified key and value to this TypeDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to add.
+            </param>
+            <param name="value">
+            The Type value of the element to add.
+            </param>
+        </member>
+        <member name="M:NLog.Internal.TypeDictionary.Contains(System.String)">
+            <summary>
+            Determines whether this TypeDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this TypeDictionary.
+            </param>
+            <returns>
+            true if this TypeDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.TypeDictionary.ContainsKey(System.String)">
+            <summary>
+            Determines whether this TypeDictionary contains a specific key.
+            </summary>
+            <param name="key">
+            The string key to locate in this TypeDictionary.
+            </param>
+            <returns>
+            true if this TypeDictionary contains an element with the specified key;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.TypeDictionary.ContainsValue(System.Type)">
+            <summary>
+            Determines whether this TypeDictionary contains a specific value.
+            </summary>
+            <param name="value">
+            The Type value to locate in this TypeDictionary.
+            </param>
+            <returns>
+            true if this TypeDictionary contains an element with the specified value;
+            otherwise, false.
+            </returns>
+        </member>
+        <member name="M:NLog.Internal.TypeDictionary.Remove(System.String)">
+            <summary>
+            Removes the element with the specified key from this TypeDictionary.
+            </summary>
+            <param name="key">
+            The string key of the element to remove.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.TypeDictionary.Item(System.String)">
+            <summary>
+            Gets or sets the Type associated with the given string
+            </summary>
+            <param name="key">
+            The string whose value to get or set.
+            </param>
+        </member>
+        <member name="P:NLog.Internal.TypeDictionary.Keys">
+            <summary>
+            Gets a collection containing the keys in this TypeDictionary.
+            </summary>
+        </member>
+        <member name="P:NLog.Internal.TypeDictionary.Values">
+            <summary>
+            Gets a collection containing the values in this TypeDictionary.
+            </summary>
+        </member>
+        <member name="T:NLog.LayoutAppenders.LayoutAppenderCollection">
+            <summary>
+            A collection of elements of type LayoutAppender
+            </summary>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.#ctor">
+            <summary>
+            Initializes a new empty instance of the LayoutAppenderCollection class.
+            </summary>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.#ctor(NLog.LayoutAppenders.LayoutAppender[])">
+            <summary>
+            Initializes a new instance of the LayoutAppenderCollection class, containing elements
+            copied from an array.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the new LayoutAppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.#ctor(NLog.LayoutAppenders.LayoutAppenderCollection)">
+            <summary>
+            Initializes a new instance of the LayoutAppenderCollection class, containing elements
+            copied from another instance of LayoutAppenderCollection
+            </summary>
+            <param name="items">
+            The LayoutAppenderCollection whose elements are to be added to the new LayoutAppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.AddRange(NLog.LayoutAppenders.LayoutAppender[])">
+            <summary>
+            Adds the elements of an array to the end of this LayoutAppenderCollection.
+            </summary>
+            <param name="items">
+            The array whose elements are to be added to the end of this LayoutAppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.AddRange(NLog.LayoutAppenders.LayoutAppenderCollection)">
+            <summary>
+            Adds the elements of another LayoutAppenderCollection to the end of this LayoutAppenderCollection.
+            </summary>
+            <param name="items">
+            The LayoutAppenderCollection whose elements are to be added to the end of this LayoutAppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.Add(NLog.LayoutAppenders.LayoutAppender)">
+            <summary>
+            Adds an instance of type LayoutAppender to the end of this LayoutAppenderCollection.
+            </summary>
+            <param name="value">
+            The LayoutAppender to be added to the end of this LayoutAppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.Contains(NLog.LayoutAppenders.LayoutAppender)">
+            <summary>
+            Determines whether a specfic LayoutAppender value is in this LayoutAppenderCollection.
+            </summary>
+            <param name="value">
+            The LayoutAppender value to locate in this LayoutAppenderCollection.
+            </param>
+            <returns>
+            true if value is found in this LayoutAppenderCollection;
+            false otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.IndexOf(NLog.LayoutAppenders.LayoutAppender)">
+            <summary>
+            Return the zero-based index of the first occurrence of a specific value
+            in this LayoutAppenderCollection
+            </summary>
+            <param name="value">
+            The LayoutAppender value to locate in the LayoutAppenderCollection.
+            </param>
+            <returns>
+            The zero-based index of the first occurrence of the _ELEMENT value if found;
+            -1 otherwise.
+            </returns>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.Insert(System.Int32,NLog.LayoutAppenders.LayoutAppender)">
+            <summary>
+            Inserts an element into the LayoutAppenderCollection at the specified index
+            </summary>
+            <param name="index">
+            The index at which the LayoutAppender is to be inserted.
+            </param>
+            <param name="value">
+            The LayoutAppender to insert.
+            </param>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.Remove(NLog.LayoutAppenders.LayoutAppender)">
+            <summary>
+            Removes the first occurrence of a specific LayoutAppender from this LayoutAppenderCollection.
+            </summary>
+            <param name="value">
+            The LayoutAppender value to remove from this LayoutAppenderCollection.
+            </param>
+        </member>
+        <member name="M:NLog.LayoutAppenders.LayoutAppenderCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that can iterate through the elements of this LayoutAppenderCollection.
+            </summary>
+            <returns>
+            An object that implements System.Collections.IEnumerator.
+            </returns>        
+        </member>
+        <member name="P:NLog.LayoutAppenders.LayoutAppenderCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the LayoutAppender at the given index in this LayoutAppenderCollection.
+            </summary>
+        </member>
+        <member name="T:NLog.LayoutAppenders.LayoutAppenderCollection.Enumerator">
+            <summary>
+            Type-specific enumeration class, used by LayoutAppenderCollection.GetEnumerator.
+            </summary>
+        </member>
+        <member name="T:NLog.LogLevel">
+            <summary>
+            Defines available log levels.
+            </summary>
+        </member>
+        <member name="F:NLog.LogLevel.Debug">
+            <summary>
+            Debug log level
+            </summary>
+        </member>
+        <member name="F:NLog.LogLevel.Info">
+            <summary>
+            Info log level
+            </summary>
+        </member>
+        <member name="F:NLog.LogLevel.Warn">
+            <summary>
+            Warn log level
+            </summary>
+        </member>
+        <member name="F:NLog.LogLevel.Error">
+            <summary>
+            Error log level
+            </summary>
+        </member>
+        <member name="F:NLog.LogLevel.Fatal">
+            <summary>
+            Fatal log level
+            </summary>
+        </member>
+        <member name="F:NLog.LogLevel.MaxLevel">
+            <summary>
+            Maximum log level. An alias for LogLevel.Fatal
+            </summary>
+        </member>
+        <member name="T:NLog.LogManager">
+            <summary>
+            Creates and manages instances of <see cref="T:NLog.Logger" /> objects.
+            </summary>
+        </member>
+        <member name="M:NLog.LogManager.GetLogger(System.String)">
+            <summary>
+            Gets the specified named logger.
+            </summary>
+            <param name="name">name of the logger</param>
+            <returns>The logger reference. Multiple calls to <c>GetLogger</c> with the same argument aren't guaranteed to return the same logger reference.</returns>
+        </member>
+        <member name="P:NLog.LogManager.Configuration">
+            <summary>
+            Gets or sets the current logging configuration.
+            </summary>
+        </member>
+    </members>
+</doc>

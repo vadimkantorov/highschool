@@ -1,0 +1,99 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CC035D5C-7D66-4FF1-835F-3F84007806EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NeCommon</RootNamespace>
+    <AssemblyName>NeCommon</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.2.6.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.2.6.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ne.Configuration\Configuration.cs" />
+    <Compile Include="Ne.Configuration\Elements.cs" />
+    <Compile Include="Ne.Configuration\Sections.cs" />
+    <Compile Include="Ne.ContestTypeHandlers\Factory.cs" />
+    <Compile Include="Ne.ContestTypeHandlers\Interfaces.cs" />
+    <Compile Include="Ne.Database\Classes\Contest.cs" />
+    <Compile Include="Ne.Database\Classes\ContestRegistration.cs" />
+    <Compile Include="Ne.Database\Classes\Enumerations.cs" />
+    <Compile Include="Ne.Database\Classes\Language.cs" />
+    <Compile Include="Ne.Database\Classes\Message.cs" />
+    <Compile Include="Ne.Database\Classes\Problem.cs" />
+    <Compile Include="Ne.Database\Classes\Rights.cs" />
+    <Compile Include="Ne.Database\Classes\RunResult.cs" />
+    <Compile Include="Ne.Database\Classes\Submission.cs" />
+    <Compile Include="Ne.Database\Classes\Test.cs" />
+    <Compile Include="Ne.Database\Classes\TestLog.cs" />
+    <Compile Include="Ne.Database\Classes\TestRunInfo.cs" />
+    <Compile Include="Ne.Database\Classes\User.cs" />
+    <Compile Include="Ne.Database\Exceptions\NeDatabaseException.cs" />
+    <Compile Include="Ne.Database\Interfaces\ContestManager.cs" />
+    <Compile Include="Ne.Database\Interfaces\DataProvider.cs" />
+    <Compile Include="Ne.Database\Interfaces\LanguageManager.cs" />
+    <Compile Include="Ne.Database\Interfaces\MessageManager.cs" />
+    <Compile Include="Ne.Database\Interfaces\ProblemManager.cs" />
+    <Compile Include="Ne.Database\Interfaces\SubmissionManager.cs" />
+    <Compile Include="Ne.Database\Interfaces\TestManager.cs" />
+    <Compile Include="Ne.Database\Interfaces\UserManager.cs" />
+    <Compile Include="Ne.Database\Tests\TestTesting.cs" />
+    <Compile Include="Ne.Helpers\Helpers.cs" />
+    <Compile Include="Ne.Tester.Common\Checker.cs" />
+    <Compile Include="Ne.Tester.Common\Compiler.cs" />
+    <Compile Include="Ne.Tester.Common\DfyzProc.cs" />
+    <Compile Include="Ne.Tester.Common\Exceptions.cs" />
+    <Compile Include="Ne.Tester.Common\INeTester.cs" />
+    <Compile Include="Ne.Tester.Common\NeTesterConfiguration.cs" />
+    <Compile Include="Ne.Tester.Common\Tester.cs" />
+    <Compile Include="Ne.Tester.Common\TestingDirectoryInfo.cs" />
+    <Compile Include="Ne.Tester.Common\Tests\DfyzProcTester.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

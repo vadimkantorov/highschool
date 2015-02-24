@@ -1,0 +1,122 @@
+:Base mwhelp.hlp
+:Title ЛогоМиры
+:Index MicroWorlds Vocabulary=Mwvoc.hlp
+1 Об авторах программы=IDH_credits
+1 Как пользоваться справочной системой=IDH_how_to_use_help_topics
+1 Как устроены ЛогоМиры
+2 Поле команд, Поле форм и Графический редактор=IDH_the_centers
+2 Инструментальное меню
+3 Инструменты для создания новых объектов=IDH_object_creation_tools
+3 Кнопки редактирования существующих объектов=IDH_the_editing_tools
+2 Меню
+3 Файл=IDH_file
+3 Редактор=IDH_edit
+3 Текст=IDH_text
+3 Листы=IDH_pages
+3 Мелочи=IDH_gadgets
+3 Помощь=IDH_help
+1 Черепашки
+2 Создание черепашки=IDH_creating_a_turtle
+2 Перемещение и направление черепашки=IDH_moving_and_turning_the_turtle
+2 Цвет и размер пера=IDH_pen_color_and_pen_size
+2 Изменение формы черепашки=IDH_changing_the_turtle_s_shape
+2 Изменение размера черепашки=IDH_changing_the_turtle_s_size
+2 Новые черепашки и имена черепашек=IDH_new_turtles_and_turtle_names
+2 Как отштамповать черепашку=IDH_stamping_a_turtle
+2 Настоящие и отштампованные черепашки=IDH_about_real_turtles_and_stamped_turtles
+2 Программирование черепашки=IDH_programming_turtles
+2 Поиск запрограммированных черепашек=IDH_finding_programmed_turtles
+2 Мультипликация=IDH_animation_techniques
+2 Удаление черепашек=IDH_removing_turtles
+2 Копирование черепашек=IDH_copying_and_pasting_turtles
+2 Активные черепашки=IDH_talking_to_turtles
+1 Графика
+2 Картинка на листе
+3 Инструменты для рисования=IDH_the_drawing_tools
+3 Отмена=IDH_undo
+3 Толщина линий=IDH_pen_size
+3 Цвета=IDH_colors
+3 Программирование цветов=IDH_programming_colors
+3 Редактирование мелких деталей рисунка=IDH_fat_bits_window
+3 Выделение и копирование рисунка=IDH_selecting__copying_and_pasting_background
+3 Импорт и экспорт рисунков=IDH_importing_and_exporting_background
+3 Установка цветовой палитры=IDH_how_windows_display_setting_will_affect
+2 Формы
+3 Редактирование формы=IDH_editing_shapes
+3 Имя и номер формы=IDH_shape_names_and_numbers
+3 Изменение размеров формы=IDH_changing_the_size_of_a_shape
+3 Копирование формы=IDH_copying_shapes
+3 Заимствование формы=IDH_importing_shapes
+1 Текстовые окна
+2 Создание текстового окна=IDH_creating_a_text_box
+2 Печать и форматирование текста=IDH_typing_and_formatting_text
+2 Рамки, имена и направляющие просмотра=IDH_transparent_text_box__name_tag__and
+2 Перемещение текстового окна=IDH_moving_text_boxes
+2 Как отштамповать текст=IDH_stamping_text
+2 Копирование текста и текстовых окон=IDH_copying_and_pasting_text_and_text
+2 Удаление текста и текстового окна=IDH_deleting_text_and_text_boxes
+2 Импорт и экспорт текста=IDH_importing_text
+2 Печать содержимого текстового окна=IDH_printing_the_contents_of_a_text_box
+2 Активные текстовые окна=IDH_talking_to_text_boxes
+1 Мультимедиа и другие объекты
+2 Импорт музыки=IDH_importing_music
+2 Создание мелодии=IDH_melodies
+2 Импорт звука=IDH_importing_sounds
+2 Запись звука=IDH_recording
+2 Кнопки=IDH_buttons
+2 Бегунки=IDH_sliders
+2 Видеоклипы=IDH_videos
+2 Аудио компакт-диски=IDH_audio_cds
+1 Управление объектами
+2 Выделение объектов=IDH_selecting_objects
+2 Перемещение объектов=IDH_moving_objects
+2 Команда Копируй=IDH_copying_and_pasting
+2 Команда Верни=IDH_about_pasting
+2 Имена копируемых объектов=IDH_unique_names_for_copied_objects
+2 Изменение свойств объектов=IDH_modifying_existing_objects
+2 Штамп=IDH_stamping_objects
+2 Удаление объектов=IDH_deleting_objects
+2 Изменение размеров объектов=IDH_making_objects_larger_and_smaller
+1 Программирование в ЛогоМирах
+2 Основы программирования
+3 Основные понятия=IDH_basic_concepts
+3 Поле команд=IDH_command_center
+3 Команды и датчики=IDH_commands_and_reporters
+3 Имена объектов как команды и датчики=IDH_object_names_as_commands_or_reporters
+3 Пробелы в именах объектов=IDH_spaces_in_object_names
+3 Лист Программ=IDH_the_procedures_page
+3 Форматирование текстов программ=IDH_formatting_your_procedures
+2 Техника программирования
+3 Арифметические выражения=IDH_arithmetic
+3 Слова и списки=IDH_words_and_lists
+3 Переменные=IDH_variables
+3 Локальные переменные=IDH_local_variables
+3 Глобальные переменные=IDH_global_variables
+3 Атрибуты проекта=IDH_project_variables
+3 Бегунки как переменные=IDH_sliders_as_variables
+3 Текстовые окна как переменные=IDH_text_boxes_as_variables
+3 Длинные слова и списки=IDH_long_words
+3 Содержимое текстовых окон=IDH_contents_of_text_boxes
+3 Активные черепашки и текстовые окна=IDH_addressing_turtles_and_text_boxes
+2 Полезные сведения
+3 Порядок листов=IDH_page_order
+3 Процедура startup=IDH_startup_procedure
+3 Спроси и ответ=IDH_question_and_answer
+3 Команда Бди=IDH_carefully
+3 Защита проекта от изменений=IDH_protecting_your_project_from_changes
+3 Отключение объектов и графики=IDH_freezing_objects_and_graphics
+2 Сложные понятия и технологии
+3 Процессы=IDH_processes
+3 Синхронизация процессов=IDH_synchronizing_processes
+3 Активные черепашки: локально и глобально=IDH_local_and_global_who
+3 Создание и модификация объектов в программах=IDH_creating_and_modifying_objects_under
+1 Проекты
+2 Перетаскивание с помощью мыши=IDH_drag_and_drop_feature
+2 Перенос проектов=IDH_porting_your_project
+2 Создание Web-страниц=IDH_creating_web_pages
+2 Заимствования в проектах=IDH_merging_projects
+2 Плеер ЛогоМиров=IDH_microworlds_player
+1 Комбинации специальных клавиш
+2 Комбинации специальных клавиш=IDH_appendix_1__special_key_combinations
+1 Англо-русский словарь примитивов
+2 Англо-русский словарь=IDH_appendix_1__english_voc

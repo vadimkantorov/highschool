@@ -1,0 +1,105 @@
+body  { 
+	font-family: Helvetica, Verdana, Arial, Sans-Serif;
+}
+
+a:link {
+	color: #0000C0;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #800080;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.nav {
+	background-color: white;
+	color: #000036;
+}
+
+.navList {
+	padding-bottom: 1em;
+	list-style-type: circle;
+}
+
+.navBlock {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-right: 8px;
+	border: 1px solid black;
+	background-color: #dfe7f3;
+}
+
+.navTitle {
+	font-size: 13pt;
+	padding-left: 15px;
+	vertical-align: middle;
+	background-color: #418ade;
+	border-top: 0.3em solid #418ade;
+	border-bottom: 0.3em solid #418ade;
+	color: white;
+	margin-top: 0;
+}
+
+.neWhiteBlue {
+	color: white;
+	background-color: #418ade;
+}
+
+.neCyan {
+	background-color: #dfe7f3;
+}
+
+.content, .content table {
+	padding: 10px;
+	font-size: 12pt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #418ade;
+}
+
+.gridHeader, .gridHeader td, .gridHeader th {
+	color: white;
+	background-color: #418ade;
+	font-weight:bolder;
+	border:1px solid white;
+	border-collapse:collapse;
+}
+
+.gridRow, .gridRow td {
+	background-color: #e0e0ff;
+	border:1px solid white;
+	border-collapse:collapse;
+}
+
+.gridAlternateRow, .gridAlternateRow td {
+	background-color: #eeeeff;
+	border:1px solid white;
+	border-collapse:collapse;
+}
+
+.positive {
+	color: green;
+}
+
+.negative {
+	color: red;
+}
+
+.monitorPositive {
+	color: blue;	
+}
+
+.monitorNegative {
+	color: red;
+}
+
+.monitorTime {
+	font-size: smaller;
+	display: block;
+}

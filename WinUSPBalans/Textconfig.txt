@@ -1,0 +1,4 @@
+[FirstParameters]
+FirstTimeStarted=0
+TimerEnabled=0
+Interval=

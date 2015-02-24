@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<appSettings>
+	<add key="SqlConnectionString" value="Server=PLUTO;Database=NeJudge;uid=sa;pwd=sa" />
+	<add key="Root" value="H:\Inetpub\wwwroot\NeJudge\" />
+	<add key="SubmissionsDirectory" value="Data\Submissions\" />
+	<add key="ProblemsDirectory" value="Data\Problems\" />
+	<add key="DfTest" value="Data\DfTest\dftest.exe" />
+	<add key="DfCompile" value="Data\DfTest\dfcompile.exe" />
+	<add key="Report" value="compiler.report" />
+	<add key="DatabaseType" value="MsSql" />
+	
+	<add key="customErrorAutomaticLogging" value = "Off" />
+	<add key="customErrorAutomaticEmail" value="Off"/>
+
+	<add key="customErrorMethod" value="Context" />
+	<add key="customErrorBranchMethod" value="Transfer" />
+	<add key="customErrorPage" value ="error.aspx" />
+	<add key="customErrorAllowReport" value="On"/>
+	<add key="customErrorEmailAddress" value="vadimkantorov@mail.ru"/>
+</appSettings>

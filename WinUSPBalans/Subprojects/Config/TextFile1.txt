@@ -1,0 +1,308 @@
+	#region NoComments
+	/*public class Config
+	{
+		class Section
+		{
+			#region Поля Secion
+            
+			private string name; // имя секции
+			public string Name
+			{
+				get {return this.name;}
+			}
+			private NameValueCollection entry_coll; // словарь записей
+			
+			#endregion
+			#region Методы Section
+			public Section(string name) // конструктор, требует имя секции
+			{
+				this.name  = name;
+				entry_coll = new NameValueCollection();
+			}
+			public  void AddEntry(string name,string value) // добавл.записи в секцию
+			{
+				if(CanWrite(name))								   
+					entry_coll.Add(name,value); // просто пихаем в словарь
+			}
+			
+			public string GetString() // получение строкового представления
+			{
+				string result=name  + "\r\n"; // вначале имя секции
+				// цикл по всем записям словаря
+				//здесь можно сделать foreach
+				for(int i=0; i<entry_coll.Count; i++)
+				{
+					result = result + entry_coll.GetKey(i) + "=" // добавл. имя ключа
+						+ entry_coll.Get(entry_coll.GetKey(i)) // имя значения по ключу
+						+ "\r\n";
+				}
+				return result;
+			}
+			public void ChangeParam(string paramname, string newparamvalue)
+			{
+				entry_coll.Set(paramname,newparamvalue);
+			}
+			public string GetParam(string name)
+			{
+				return entry_coll.Get(name);
+			}
+			private bool CanWrite(string name)
+			{
+				foreach(string str in entry_coll.AllKeys)
+				{
+					if(str == name)
+						return false;
+				}
+				return true;
+			}
+			#endregion
+		}
+
+		#region Поля Config
+		private ArrayList sec_list;         // список секций
+		private Section   current_sec;      // ссылка на текущую секцию
+		public static Config operator + (Config v1,Config v2)
+		{
+			string s = v1.GetString()+v2.GetString();
+			return Parse(s);
+		}
+		#endregion
+		#region Конструктор Config
+		public Config()
+		{
+			sec_list = new ArrayList();
+		}
+		#endregion
+		#region Методы Config
+		
+		public int GetSectionIndexByName(string name)
+		{
+			for(int i=0; i<sec_list.Count; i++)
+				if(((Section)sec_list[i]).Name == name)
+					return i;
+				else continue;
+			return -1;
+		}
+
+		public string this[string secname, string paramname]
+		{
+			get
+			{
+				if(GetSectionIndexByName(secname) == -1)	throw new Exception("Секции с таким именем не существует");
+				Section temp = (Section)sec_list[GetSectionIndexByName(secname)];
+				return temp.GetParam(paramname);
+			}
+			set
+			{
+				if(GetSectionIndexByName(secname) == -1)	throw new Exception("Секции с таким именем не существует");
+				Section temp = (Section)sec_list[GetSectionIndexByName(secname)];
+				temp.ChangeParam(paramname,value);
+			}
+		}
+		public void BeginSection(string name)
+		{
+			if(GetSectionIndexByName(name) == -1)
+			{
+				Section s = new Section(name); /// создаем новую секцию
+				sec_list.Add(s);    // добавляем ее (ссылку на нее) в список
+				current_sec = s;     // делаем текущей секцией
+			}
+		}
+		public void AddEntry(string name,string value)
+		{
+			// добавл. запись к текущей секции
+			current_sec.AddEntry(name,value);
+		}
+		public string GetString()
+		{
+			string result="";
+			// используем удобный оператор с автоматизированным, так сказать,
+			// приведением типов
+			foreach(Section s in sec_list)	result = result + s.GetString();
+			return result;
+		}
+		public void Save(string directory, string name) 
+		{
+			string fullname=directory + name + ".ini";
+			StreamWriter stw=new StreamWriter(fullname);
+			stw.Write(this.GetString());
+			stw.Close();
+		}
+		public void Save(string filename) 
+		{
+			string fullname = filename + ".ini";
+			StreamWriter stw=new StreamWriter(fullname);
+			stw.Write(this.GetString());
+			stw.Close();
+		} 
+		public static Config Load(string path)
+		{
+			if(path.Equals(""))	throw new FileNotFoundException("Парсить нечего(путь пустой)");
+			string s = new StreamReader(path).ReadToEnd();
+			if(s=="") throw new Exception("Парсить нечего(файл пустой)");
+			return Parse(s);
+		}
+		private static Config Parse(StringReader sr)
+		{
+			Config p_cn = new Config();
+			string line;
+			while( (line=sr.ReadLine() ) != null ) 
+			{
+				switch (line[0])
+				{
+					case '[':	
+						p_cn.BeginSection(line);
+						break;
+					case '#':
+						break;
+					default:
+						string[] split = line.Split("=".ToCharArray());
+						if ( split[0]!="")	p_cn.AddEntry(split[0],split[1]);
+						else 
+						{
+							//Console.WriteLine("Возникла ошибка в параметре");
+							//Console.Read();
+							//p_cn.AddEntry(split[0],split[1]);
+						}
+						break;
+				}
+			}
+			sr.Close();
+			return p_cn;
+		}
+
+		public static Config Parse(string s)
+		{
+			return Parse(new StringReader(s));
+		}
+		#endregion	
+	}*/
+	#endregion
+	#region No Comments2
+	/*public class ConfigX
+	{
+		#region Поля ConfigX
+		ArrayList sec_list;
+		Section current_sec;
+		public string this[string secname, string paramname]
+		{
+			get
+			{
+				if(GetSectionIndexByName(secname) == -1)	throw new Exception("Секции с таким именем не существует");
+				Section temp = (Section)sec_list[GetSectionIndexByName(secname)];
+				return temp.GetParam(paramname);
+			}
+			set
+			{
+				if(GetSectionIndexByName(secname) == -1)	throw new Exception("Секции с таким именем не существует");
+				Section temp = (Section)sec_list[GetSectionIndexByName(secname)];
+				temp.ChangeParam(paramname,value);
+			}
+		}
+		#endregion
+		#region Методы ConfigX
+		public int GetSectionIndexByName(string name)
+		{
+			for(int i=0; i<sec_list.Count; i++)
+				if(((Section)sec_list[i]).Name == name)
+					return i;
+				else continue;
+			return -1;
+		}
+
+		public string ReadFromSection(int index)
+		{
+			ArrayList v = new ArrayList();
+			string str = "";
+			for(int i = index;i<=sec_list.Count;i++)
+				v.Add(sec_list[i]);
+			foreach(Section s in v)
+				str+=s.GetString();
+			return str;
+		}
+		public string ReadFromSection(string name)
+		{
+			int i = GetSectionIndexByName(name);
+			if(i!=-1)
+				return ReadFromSection(i);
+		}
+		public void BeginSection(string name)
+		{
+			if(GetSectionIndexByName(name) == -1)
+			{
+				SectionXXX s = new SectionXXX(name); /// создаем новую секцию
+				sec_list.Add(s);    // добавляем ее (ссылку на нее) в список
+				current_sec = s;     // делаем текущей секцией
+			}
+		}
+		public void AddEntry(string name,string value)
+		{
+			// добавл. запись к текущей секции
+			current_sec.AddEntry(name,value);
+		}
+		public string GetString()
+		{
+			string result="";
+			// используем удобный оператор с автоматизированным, так сказать,
+			// приведением типов
+			foreach(Section s in sec_list)	result += s.GetString();
+			return result;
+		}
+		public void Save(string directory, string name) 
+		{
+			string fullname=directory + name + ".ini";
+			StreamWriter stw=new StreamWriter(fullname);
+			stw.Write(this.GetString());
+			stw.Close();
+		}
+		public void Save(string filename) 
+		{
+			string fullname = filename + ".ini";
+			StreamWriter stw=new StreamWriter(fullname);
+			stw.Write(this.GetString());
+			stw.Close();
+		} 
+		public static Config Load(string path)
+		{
+			if(path.Equals(""))	throw new FileNotFoundException("Парсить нечего(путь пустой)");
+			string s = new StreamReader(path).ReadToEnd();
+			if(s=="") throw new Exception("Парсить нечего(файл пустой)");
+			return Parse(s);
+		}
+		private static Config Parse(StringReader sr)
+		{
+			Config p_cn = new Config();
+			string line;
+			while( (line=sr.ReadLine() ) != null ) 
+			{
+				switch (line[0])
+				{
+					case '[':	
+						p_cn.BeginSection(line);
+						break;
+					case '#':
+						break;
+					default:
+						string[] split = line.Split("=".ToCharArray());
+						if ( split[0]!="")	p_cn.AddEntry(split[0],split[1]);
+						break;
+				}
+			}
+			sr.Close();
+			return p_cn;
+		}
+
+		public static Config Parse(string s)
+		{
+			return Parse(new StringReader(s));
+		}
+		#endregion	
+		#region Конструктор ConfigX
+		public ConfigX()
+		{
+			sec_list = new ArrayList();
+		}
+		#endregion
+
+	}*/
+	#endregion
